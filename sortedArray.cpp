@@ -48,6 +48,18 @@ void testNegativeValues() {
     assert(result == true); //sorted, shud return true.
 }
 
+void testEmptyArray() {
+    int arr[] = {};
+    bool result = isSorted(arr, 0);
+    assert(result == true); //sorted, shud return true. nothing to sort here.
+}
+
+void testIdenticalArray() {
+    int arr[] = {-10, -10, -10, -10, -10, -10};
+    bool result = isSorted(arr, 6);
+    assert(result == true); //sorted as all equal, shud return true.
+}
+
 int main() {
 
     testSortedArray(); 
